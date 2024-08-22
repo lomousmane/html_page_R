@@ -1,0 +1,41 @@
+---
+title: "second_page_html"
+format: html
+editor: visual
+---
+
+# Télécharger les packages
+
+```{r}
+library(tidyverse)
+library(reactable)
+library(plotly)
+```
+
+# Visualiser les données
+
+```{r}
+gss_cat %>% 
+    reactable()
+```
+
+# Dimension et structure
+
+```{r}
+str(gss_cat)
+
+```
+
+# Summary
+
+```{r}
+summary(gss_cat)
+```
+
+# Visualisation
+
+```{r}
+marital_plot<-ggplot(data=gss_cat,aes(x=marital,fill=marital))+
+    geom_bar()
+ggplotly(marital_plot)
+```
