@@ -1,0 +1,25 @@
+---
+title: "html_page"
+format: html
+editor: visual
+---
+
+# Télécharger les packages
+```{r}
+library(tidyverse)
+library(reactable)
+```
+# Visualiser les données
+```{r}
+iris %>% 
+    reactable()
+```
+# Dimension et structure
+```{r}
+str(iris)
+
+```
+# Summary
+```{r}
+summary(iris)
+```
